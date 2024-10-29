@@ -7,7 +7,6 @@ import (
     "time"
 )
 
-// listDirectoryRecursively recursively lists files and directories.
 func listDirectoryRecursively(path string, showAll, longFormat bool) error {
     fmt.Println(path + ":")
 
@@ -17,16 +16,14 @@ func listDirectoryRecursively(path string, showAll, longFormat bool) error {
     }
 
     for _, entry := range entries {
-        // Skip hidden files unless `showAll` (-a) is true
         if !showAll && entry.Name()[0] == '.' {
             continue
         }
 
-        // Handle `-l` flag (long format)
         if longFormat {
             info, err := entry.Info()
             if err != nil {
-                continue // Skip files with errors
+                continue 
             }
 
             modTime := info.ModTime().Format(time.RFC822)
@@ -36,7 +33,6 @@ func listDirectoryRecursively(path string, showAll, longFormat bool) error {
         }
     }
 
-    // Recursively visit directories if `-R` is enabled
     for _, entry := range entries {
         if entry.IsDir() {
             subdir := path + "/" + entry.Name()
@@ -50,7 +46,6 @@ func listDirectoryRecursively(path string, showAll, longFormat bool) error {
 }
 
 func main() {
-    // Simulate flag values for demonstration
     showAll := true
     longFormat := true
 
