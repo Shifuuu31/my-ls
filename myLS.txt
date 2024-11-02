@@ -1,0 +1,287 @@
+Path= .:
+.
+..
+.git
+@media.p
+README.md
+go.mod
+main.go
+my-ls_subject
+myLS.txt
+rLS.txt
+source
+test
+
+Path= ./.git:
+.
+..
+COMMIT_EDITMSG
+FETCH_HEAD
+HEAD
+branches
+config
+description
+hooks
+index
+info
+logs
+objects
+packed-refs
+refs
+
+Path= ./.git/branches:
+.
+..
+
+Path= ./.git/hooks:
+.
+..
+applypatch-msg.sample
+commit-msg.sample
+fsmonitor-watchman.sample
+post-update.sample
+pre-applypatch.sample
+pre-commit.sample
+pre-merge-commit.sample
+pre-push.sample
+pre-rebase.sample
+pre-receive.sample
+prepare-commit-msg.sample
+push-to-checkout.sample
+update.sample
+
+Path= ./.git/info:
+.
+..
+exclude
+
+Path= ./.git/logs:
+.
+..
+HEAD
+refs
+
+Path= ./.git/logs/refs:
+.
+..
+heads
+remotes
+
+Path= ./.git/logs/refs/heads:
+.
+..
+main
+
+Path= ./.git/logs/refs/remotes:
+.
+..
+origin
+
+Path= ./.git/logs/refs/remotes/origin:
+.
+..
+HEAD
+main
+
+Path= ./.git/objects:
+.
+..
+12
+1d
+25
+29
+2f
+33
+36
+51
+55
+64
+6b
+7e
+86
+88
+8d
+9a
+9c
+af
+c8
+de
+info
+pack
+
+Path= ./.git/objects/12:
+.
+..
+6dd9c8c9c1624535da87b81b1651c4e6997072
+
+Path= ./.git/objects/1d:
+.
+..
+3866805517099a66c9bbaed365920aac136f94
+
+Path= ./.git/objects/25:
+.
+..
+3a80fdc77cc4f00233acdffd2d296f2add3eff
+
+Path= ./.git/objects/29:
+.
+..
+3e4aa86a30b8abcbd22419965db26e16de8268
+
+Path= ./.git/objects/2f:
+.
+..
+7b5836b3c941ca84549797fb63ad78821da7f5
+
+Path= ./.git/objects/33:
+.
+..
+19d60c206ceac23005054ae927bd52dc132b99
+
+Path= ./.git/objects/36:
+.
+..
+88a669b39f11f9fa9b202f1fc91a49b23e393a
+
+Path= ./.git/objects/51:
+.
+..
+f66245977f05810f2861fa79c6f91d686242f7
+
+Path= ./.git/objects/55:
+.
+..
+2213c6a7494e2dc2de6237eaf363339fe61e55
+
+Path= ./.git/objects/64:
+.
+..
+752ac25a5ad6c2c4844985d91bf8dd614f6090
+
+Path= ./.git/objects/6b:
+.
+..
+6d35644dd9bcb35c59fa8c090bd652e5c303d0
+
+Path= ./.git/objects/7e:
+.
+..
+51c36a96bc6c4c47e3382735c76999a1e37c1d
+
+Path= ./.git/objects/86:
+.
+..
+9982f1057cc85ee26ba40f43e697086114e3bf
+
+Path= ./.git/objects/88:
+.
+..
+90040c2490ca6704b4ed7989a9a955d2da7875
+
+Path= ./.git/objects/8d:
+.
+..
+6cbf9a6d31bd28edc031ecf17f1f8938a148c9
+
+Path= ./.git/objects/9a:
+.
+..
+ab22c74b34d5a894353ce905c557446cb11cca
+
+Path= ./.git/objects/9c:
+.
+..
+ef91f1c1cb5d21d95617f5cbf333f39fdaa20b
+
+Path= ./.git/objects/af:
+.
+..
+3cc7dcd7d362b3491e818a111f2415da289ba9
+
+Path= ./.git/objects/c8:
+.
+..
+8435dcbb9a2a7879bab9e42b2b2dc59ce9e2b1
+
+Path= ./.git/objects/de:
+.
+..
+614791c6ca43846194245d14c0771f394920b4
+
+Path= ./.git/objects/info:
+.
+..
+
+Path= ./.git/objects/pack:
+.
+..
+pack-a2dbc22a4008003995da81b266554e7449e61caf.idx
+pack-a2dbc22a4008003995da81b266554e7449e61caf.pack
+
+Path= ./.git/refs:
+.
+..
+heads
+remotes
+tags
+
+Path= ./.git/refs/heads:
+.
+..
+main
+
+Path= ./.git/refs/remotes:
+.
+..
+origin
+
+Path= ./.git/refs/remotes/origin:
+.
+..
+HEAD
+main
+
+Path= ./.git/refs/tags:
+.
+..
+
+Path= ./my-ls_subject:
+.
+..
+README.md
+audit
+
+Path= ./my-ls_subject/audit:
+.
+..
+README.md
+
+Path= ./source:
+.
+..
+parser
+structures.go
+
+Path= ./source/parser:
+.
+..
+parsing.go
+
+Path= ./test:
+.
+..
+t1
+t2
+test
+test.go
+test2.go
+
+Path= ./test/t1:
+.
+..
+
+Path= ./test/t2:
+.
+..
+

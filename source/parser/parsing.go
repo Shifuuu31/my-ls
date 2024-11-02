@@ -1,15 +1,18 @@
-package source
+package parser
 
 import (
 	"errors"
 	"fmt"
 	"os"
 	"strings"
+
+	"my-ls/source"
 )
 
-func ParseArgs(ls *MyLsFlag) error {
-	argCount := len(os.Args[1:])
-	if argCount == 0 {
+var ArgCount int
+
+func ParseArgs(ls *source.MyLsFlag, In *source.Inputs) error {
+	if ArgCount == 0 {
 		return nil
 	} else {
 		for _, arg := range os.Args[1:] {
@@ -22,7 +25,7 @@ func ParseArgs(ls *MyLsFlag) error {
 					return err
 				}
 			} else {
-				if err := checkPath(arg); err != nil {
+				if err := checkPath(In, arg); err != nil {
 					return err
 				}
 			}
@@ -38,7 +41,7 @@ func isValidFlag(flag string) bool {
 	return false
 }
 
-func getOption(ls *MyLsFlag, argument string) error {
+func getOption(ls *source.MyLsFlag, argument string) error {
 	for _, c := range argument[1:] {
 		// fmt.Println(string(c))
 		switch c {
@@ -60,20 +63,24 @@ func getOption(ls *MyLsFlag, argument string) error {
 	return nil
 }
 
-func checkPath(path string) error {
-	fileInfo, err := os.Stat(path)
-	if os.IsNotExist(err) {
-		fmt.Println(path)
-		return errors.New("my-ls: cannot access '" + path + "': No such file or directory")
-	}
-	if err != nil {
-		return err
-	}
+func checkPath(In *source.Inputs, path string) error {
+    if In == nil {
+        return errors.New("Inputs struct is not initialized")
+    }
 
-	if fileInfo.IsDir() {
-		Dir = append(Dir, path)
-	} else {
-		File = append(File, path)
-	}
-	return nil
+    fileInfo, err := os.Stat(path)
+    if os.IsNotExist(err) {
+        fmt.Println(path)
+        return errors.New("my-ls: cannot access '" + path + "': No such file or directory")
+    }
+    if err != nil {
+        return err
+    }
+
+    if fileInfo.IsDir() {
+        In.Dir = append(In.Dir, path)
+    } else {
+        In.File = append(In.File, path)
+    }
+    return nil
 }
